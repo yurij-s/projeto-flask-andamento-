@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Cadastrar Livro</title>
+</head>
+<body>
+    <form action="{{ url_for('cadastra_livro') }}" method="POST">
+        <label for="titulo">Título</label><br>
+        <input type="text" id="titulo" name="titulo"><br><br>
+
+        <label for="ano">Ano</label><br>
+        <input type="date" id="ano" name="ano"><br><br>
+        
+        <label for="genero">Gênero</label><br>
+        <input type="text" id="genero" name="genero"><br><br>
+
+        <labe for="id_autor">Id Autor</labe><br>
+        <input type="number" id="id_autor" name="id_autor"><br><br>
+        
+        <button>Cadastrar</button>
+    </form>
+</body>
+</html>

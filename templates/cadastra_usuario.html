@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Usuário</title>
+    <style>
+        .error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        {% if message %}
+            <p class="error-message">{{ message }}</p>
+        {% endif %}
+
+        <form action="{{ url_for('cadastra_usuario') }}" method="POST">
+            <label for="nome_usuario">Nome</label><br>
+            <input type="text" id="nome_usuario" name="nome_usuario"><br><br>
+
+            <label for="senha_usuario">Senha</label><br>
+            <input type="password" id="senha_usuario" name="senha_usuario"><br><br>
+
+            <button>Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
